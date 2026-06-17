@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Calculadora de Hipotenusa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma calculadora interativa e elegante que utiliza uma fórmula matemática personalizada para calcular a hipotenusa de um triângulo retângulo, oferecendo uma alternativa ao Teorema de Pitágoras tradicional.
 
-Currently, two official plugins are available:
+## 🧮 A Fórmula
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A calculadora baseia-se na seguinte fórmula personalizada:
 
-## React Compiler
+**C = K × B + A**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Onde o coeficiente **K** é calculado como:
 
-## Expanding the ESLint configuration
+**K = √((A/B)² + 1) - A/B**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **A**: Cateto menor
+* **B**: Cateto maior
+* **C**: Hipotenusa
+* **K**: Coeficiente de proporção
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O usuário tem a opção de inserir o valor de K manualmente ou deixar que o sistema o calcule automaticamente com base nos catetos fornecidos.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Tecnologias Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **Vite** - Ferramenta de build rápida
+* **React** - Biblioteca JavaScript para construção da interface
+* **TypeScript** - Superset tipado de JavaScript
+* **CSS3** - Estilização com variáveis CSS (OKLCH) para um tema escuro moderno
+
+## 💻 Como rodar localmente
+
+Siga os passos abaixo para executar o projeto em sua máquina:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Nagato09-dev/gabriel-hypotenuse-calc.git
+   ```
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd gabriel-hypotenuse-calc
+   ```
+
+3. Instale as dependências:
+   ```bash
+   pnpm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   pnpm run dev
+   ```
+
+## 🌐 Como fazer o deploy
+
+O projeto está configurado para ser publicado no GitHub Pages. Para fazer o deploy de uma nova versão, execute:
+
+```bash
+pnpm run deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔗 Link do Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+O site está publicado e pode ser acessado em:
+[https://nagato09-dev.github.io/gabriel-hypotenuse-calc/](https://nagato09-dev.github.io/gabriel-hypotenuse-calc/)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Créditos
+
+Fórmula criada por **Gabriel**.
+Interface e design inspirados em calculadoras científicas modernas.

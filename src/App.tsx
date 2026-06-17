@@ -176,13 +176,13 @@ function App() {
             {/* Triângulo retângulo */}
             <polygon
               points="50,200 250,200 250,50"
-              fill="rgba(102, 126, 234, 0.1)"
-              stroke="#667eea"
+              fill="rgba(199, 160, 0, 0.1)"
+              stroke="var(--gold)"
               strokeWidth="2"
             />
 
             {/* Ângulo reto */}
-            <rect x="235" y="185" width="15" height="15" fill="none" stroke="#667eea" strokeWidth="2" />
+            <rect x="235" y="185" width="15" height="15" fill="none" stroke="var(--gold)" strokeWidth="2" />
 
             {/* Rótulos dos lados */}
             <text x="150" y="225" textAnchor="middle" className="label">
